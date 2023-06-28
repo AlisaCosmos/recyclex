@@ -22,7 +22,7 @@ http://test.alisawebdev.com/
 
 ### Запуск проекта
 
-- git clone https://github.com/mrglk/recyclex
+- git clone https://github.com/AlisaCosmos/recyclex.git
 - cd recyclex
 - npm install
 - npm start
