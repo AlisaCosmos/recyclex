@@ -1,0 +1,25 @@
+@import "../../styles/vars";
+
+.personalData {
+  width: 514px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (max-width: $tablet)  {
+    .personalData {
+        width: 580px;
+      }
+}
+
+@media (max-width: 680px)  {
+    .personalData {
+        width: 100%;
+      }
+}
+
+@media (min-width: $ultra)  {
+.personalData {
+    width: 1030px;
+  }
+}

@@ -1,0 +1,98 @@
+@import "vars";
+
+
+@mixin before_circle-pressed {
+    &:before {
+        margin: 0;
+        padding: 0;
+        display: block;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: -14px;
+        left: -24px;
+        width: 66px;
+        height: 66px;
+        border-radius: 100%;
+        background-color: #5FAE36;
+        border: 4px solid #5FAE36;
+    }
+}
+
+@mixin before_circle {
+    &::before {
+        margin: 0;
+        padding: 0;
+        display: block;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: -14px;
+        left: -24px;
+        width: 66px;
+        height: 66px;
+        border-radius: 100%;
+        border: 4px solid #5FAE36;
+    }
+}
+@mixin divider {
+    &::after{
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 15px;
+        left: 41px;
+        width: 67px;
+        background-color: #5FAE36;
+        border: 3px solid #5FAE36;
+    }
+}
+@mixin before_circleList {
+    &::before {
+        margin: 0;
+        padding: 0;
+        border:0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        display: block;
+        box-sizing: border-box;
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 4px;
+        left: -44px;
+        width: 24px;
+        height: 24px;
+        border-radius: 100%;
+        background-color: $accentColor;
+    }  
+}
+@mixin before_circleListBlack {
+    &::before {
+        margin: 0;
+        padding: 0;
+        border:0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        display: block;
+        box-sizing: border-box;
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 7px;
+        left: -20px;
+        width: 8px;
+        height: 8px;
+        border-radius: 100%;
+        background-color: #000000;
+    }  
+}

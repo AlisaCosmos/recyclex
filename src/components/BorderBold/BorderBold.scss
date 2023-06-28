@@ -1,0 +1,30 @@
+@import "../../styles/vars";
+
+.borderBold {
+    position: relative;
+        &:before {
+            box-sizing: border-box;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            top: 0;
+            right:0;
+            bottom:0;
+            left:0;
+            height: 100%;
+            border: 9px solid #85D454;
+            border-radius: 50px;
+            background: inherit;
+            background-clip: border-box;
+            filter: blur(3px);
+            content: '';
+        }
+    background: #F9F9F9;
+    z-index: 1;
+    border-radius: 50px;
+}
+
+/* #dark .borderBold {
+    background: rgba(255, 255, 255, 0.08);
+} */

@@ -1,0 +1,130 @@
+@import "./styles/_vars.scss";
+
+.App {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#dark {
+  background-color: $bgColor_dark;
+  color: $textColor_dark
+}
+
+#light {
+  background-color: $bgColor;
+  color: $textColor;
+}
+
+// .app__chat {
+//   position: fixed;
+//   z-index: 1000;
+//   bottom: 60px;
+//   right: 60px;
+//   width: 0;
+//   border: none;
+//   background-color: inherit;
+// }
+
+// .app__chatIcon {
+//   position: fixed;
+//   z-index: 1000;
+//   bottom: 60px;
+//   right: 60px;
+//   width: 90px;
+// }
+
+// .app__chatOnline {
+//   position: fixed;
+//   z-index: 2000;
+//   width: 10px;
+//   bottom: 133px;
+//   right: 70px;
+// }
+
+.home__page {
+  /* background-image: url(./assets/imgs/background_desktop_comp.png); */ //До правок дизайна
+  background-image: url(./assets/imgs/desktop_1440_comp.png); 
+  background-size: 100%;
+  
+  background-repeat: no-repeat;
+  background-color: $bgColor;
+
+    @media (min-width: $ultra) {
+      background-image: url(./assets/imgs/desktop_4k_copm.png); 
+      
+    }
+
+    @media (max-width: $tablet), (orientation: portrait) and (min-width: $tablet) and (max-width: 1025px) and (min-height:1024px) and (max-height:1367px), 
+    (orientation: landscape) and (min-width: 1023px) and (max-width: 1367px) and (min-height: 767px) and (max-height: 1025px) {
+      /* background-image: url(./assets/imgs/background_table_comp.png);  */
+      background-image: url(./assets/imgs/desktop_834_comp.png); 
+      background-position-y: 50px;
+}
+    @media (max-width: $mobile)  {
+      /* background-image: url(./assets/imgs/background_mobile_comp.png); */
+      background-image: url(./assets/imgs/desktop_320_comp.png);
+      background-position-y: 50px;
+}
+}
+
+
+// @media (max-width: $tablet)  {
+//   .app__chatIcon {
+//     bottom: 30px;
+//     right: 30px;
+//     width: 75px;
+//   }
+  
+//   .app__chatOnline {
+//     width: 9px;
+//     bottom: 90px;
+//     right: 38px;
+//   }
+// }
+
+// @media (max-width: $mobile)  {
+//   .app__chatIcon {
+//     bottom: 15px;
+//     right: 15px;
+//     width: 65px;
+//   }
+  
+//   .app__chatOnline {
+//     width: 6px;
+//     bottom: 69px;
+//     right: 24px;
+//   }
+// }
+
+// @media (min-width: $ultra)  {
+//   .app__chatIcon {
+//     bottom: 60px;
+//     right: 60px;
+//     width: 200px;
+//   }
+  
+//   .app__chatOnline {
+//     width: 35px;
+//     bottom: 208px;
+//     right: 74px;
+//   }
+// }
+
+
+
+// @media screen and (orientation:landscape)
+// and (max-width: $landscape) {
+//   .app__chatIcon {
+//     bottom: 15px;
+//     right: 15px;
+//     width: 65px;
+//   }
+  
+//   .app__chatOnline {
+//     width: 6px;
+//     bottom: 69px;
+//     right: 24px;
+//   }
+// }

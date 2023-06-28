@@ -1,0 +1,202 @@
+@import "../../styles/vars";
+
+.formButton {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  font-size: 20px;
+  overflow: hidden;
+  }
+  
+  .formButton__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  }
+  
+  .formButton__arrowWrapper {
+  display: grid;
+  grid-template-columns: 10fr 1fr;
+  align-items: center;
+  width: 0;
+  height: 20px;
+  overflow: hidden;
+  transition: width 0.2s ease-in-out;
+  }
+  
+  .formButton__inner:hover .formButton__arrowWrapper {
+  width: 20px;
+  transition: width 0.5s ease-in-out;
+  overflow: visible;
+  }
+  
+  .formButton__arrow {
+  width: 20px;
+  margin-left: 10px;
+  transition: transform 300ms ease;
+  -webkit-transition: transform 300ms ease;
+  }
+  
+  .formButton__arrow_active {
+  transform: translateX(1000%);
+  
+  }
+  
+  .formButton__inner:hover .formButton__arrowWrapper_active {
+  width: 0;
+  }
+  
+  .formButton__checkWrapper {
+  position: relative;
+  display: none;
+  }
+  
+  .formButton__checkWrapper_active {
+  display: block;
+  }
+  
+  .formButton__check {
+  position: absolute;
+  width: 18px;
+  top: -7px;
+  right: -5px;
+  }
+  
+  .formButton__sendedText {
+  font-weight: 700;
+  margin-right: 18px;
+  }
+  
+  @media (max-width: $tablet), (orientation: portrait) and (min-width: $tablet) and (max-width: 1025px) and (max-height:1367px) {
+  .formButton {
+  margin-bottom: 15px;
+  }
+  
+  .formButton__inner:hover .formButton__arrowWrapper {
+  width: 0;
+  height: 20px;
+  overflow: hidden;
+  
+  }
+  
+  .formButton .formButton__arrowWrapper.formButton__arrowWrapper_active {
+  width: 20px;
+  overflow: visible;
+  }
+  
+  .formButton__check {
+  top: -7px;
+  right: -5px;
+  }
+  
+  .formButton__sendedText {
+  margin-right: 0;
+  }
+  }
+  
+  @media (max-width: $mobile) {
+  .formButton__arrowWrapper {
+  width: 0;
+  height: 12px;
+  overflow: hidden;
+  }
+  
+  .formButton__inner:hover .formButton__arrowWrapper {
+  width: 0;
+  height: 12px;
+  overflow: hidden;
+  }
+  
+  .formButton .formButton__arrowWrapper.formButton__arrowWrapper_active {
+  width: 12px;
+  overflow: visible;
+  }
+  
+  .formButton__arrow {
+  width: 12px;
+  margin-left: 8px;
+  }
+  
+  .formButton__check {
+  width: 11px;
+  top: -5px;
+  right: -5px;
+  }
+  
+  .formButton__sendedText {
+  margin-right: 0;
+  }
+  
+  }
+  
+  @media (min-width: $ultra) {
+  .formButton {
+  margin-bottom: 78px;
+  }
+  
+  .formButton__arrowWrapper {
+  width: 0;
+  height: 45px;
+  overflow: hidden;
+  }
+  
+  .formButton__inner:hover .formButton__arrowWrapper {
+  width: 45px;
+  transition: width 0.2s ease-in-out;
+  overflow: visible;
+  }
+  
+  .formButton__arrow {
+  width: 45px;
+  margin-left: 18px;
+  }
+  
+  .formButton__check {
+  width: 40px;
+  top: -15px;
+  right: -17px;
+  }
+  
+  .formButton__sendedText {
+  margin-right: 35px;
+  }
+  }
+  @media screen 
+  and (pointer:coarse)
+  and (orientation: landscape) 
+  and (min-width: 1023px) 
+  and (max-width: 1367px) 
+  and (min-height: 767px) 
+  and (max-height: 1025px) {
+  .formButton {
+  margin-bottom: 15px;
+  }
+  
+  .formButton__inner:hover .formButton__arrowWrapper {
+  width: 0;
+  height: 20px;
+  overflow: hidden;
+  
+  }
+  
+  .formButton .formButton__arrowWrapper.formButton__arrowWrapper_active {
+  width: 20px;
+  overflow: visible;
+  }
+  
+  .formButton__check {
+  top: -7px;
+  right: -5px;
+  }
+  
+  .formButton__sendedText {
+  margin-right: 0;
+  }
+  
+  }
+  
+
+
+
+

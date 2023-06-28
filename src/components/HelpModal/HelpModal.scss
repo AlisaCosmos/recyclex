@@ -1,0 +1,413 @@
+@import "../../styles/vars";
+
+.help {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  font-family: $modalFont;
+  font-weight: 500;
+}
+
+#dark .help {
+  background-color: rgb(87 85 85 / 40%);
+}
+
+.help__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.help__content {
+  padding: 31px 35px 30px 35px;
+  background-color: $bgColor;
+  width: 850px;
+  max-height: 700px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+#dark .help__content {
+  background-color: $bgColor_dark;
+}
+
+.help__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 39px;
+}
+
+.help__logo {
+  width: 251px;
+}
+
+.help__close {
+  background-color: inherit;
+  border: none;
+  &:focus .help__cross rect {
+    fill: $accentColor;
+  }
+}
+
+.help__cross {
+  width: 19px;
+  height: 19px;
+  fill: $textColor;
+  & :hover rect {
+    fill: $accentColor;
+  }
+  & :focus rect {
+    fill: $accentColor;
+  }
+}
+
+#dark .help__cross {
+  fill: $textColor_dark;
+  & :hover rect {
+    fill: $accentColor;
+  }
+}
+//Стили для ховера на иконку
+.help__cross_focus {
+  fill: $accentColor;
+}
+.help__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.help__rows {
+  display: flex;
+  flex-direction: column;
+}
+
+.help__footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.help__helper {
+  width: 30%;
+}
+
+.help__alertAndButton {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+}
+
+.help__alert {
+  display: flex;
+  width: 360px;
+  font-size: 12px;
+  line-height: 12px;
+  margin-bottom: 15px;
+}
+
+.help__alertIcon {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+.help__focusReset {
+  &:focus {
+    outline: none;
+  }
+}
+.help__agreement {
+  text-decoration: underline;
+  /*   &:hover {
+    color: $accentColor;
+  }
+  &:focus {
+    color: $accentColor;
+    outline: none;
+} */
+
+  &:focus {
+    color: $accentColor;
+    outline: none;
+  }
+}
+
+@media (hover: hover) {
+  .help__agreement:hover {
+    cursor: pointer;
+    color: $accentColor;
+    transition: color 0.1s ease;
+  }
+}
+@media (hover: none) {
+  .help__agreement:hover {
+    color: inherit;
+  }
+  .help__agreement:active {
+    color: $accentColor;
+  }
+}
+
+#dark .help__agreement {
+  color: $textColor_dark;
+  /*   &:hover {
+    color: $accentColor;
+  }
+  &:focus {
+    color: $accentColor;
+    outline: none;
+} */
+  &:focus {
+    color: $accentColor;
+    outline: none;
+  }
+}
+
+@media (hover: hover) {
+  #dark .help__agreement:hover {
+    cursor: pointer;
+    color: $accentColor;
+    transition: color 0.1s ease;
+  }
+}
+@media (hover: none) {
+  #dark .help__agreement:hover {
+    color: inherit;
+  }
+  #dark .help__agreement:active {
+    color: $accentColor;
+  }
+}
+
+@media (max-width: $tablet) {
+  .help__space {
+    display: none;
+  }
+  .help__content {
+    width: 550px;
+    padding: 41px 60px 51px 26px;
+    max-height: 580px;
+  }
+
+  .help__logo {
+    width: 164px;
+  }
+
+  .help__cross {
+    width: 11px;
+    height: 11px;
+  }
+
+  .help__helper {
+    width: 30%;
+  }
+
+  .help__alertAndButton {
+    width: 60%;
+  }
+
+  .help__alert {
+    width: 250px;
+    font-size: 8px;
+    line-height: 8px;
+    margin-bottom: 20px;
+  }
+
+  .help__alertIcon {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@media (max-width: $smallTablet) {
+  .help__content {
+    width: 320px;
+    padding: 22px 20px 23px 28px;
+    max-height: 535px;
+  }
+
+  .help__header {
+    position: relative;
+    margin-bottom: 8px;
+  }
+
+  .help__close {
+    position: absolute;
+    right: 0;
+    top: -10px;
+  }
+
+  .help__cross {
+    width: 8px;
+    height: 8px;
+  }
+
+  .help__helper {
+    display: none;
+  }
+
+  .help__alertAndButton {
+    width: 100%;
+  }
+
+  .help__alert {
+    width: 250px;
+    margin-bottom: 9px;
+  }
+
+  .help__alertIcon {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media (max-width: $smallMobile) {
+  .help__content {
+    width: 260px;
+  }
+
+  .help__header {
+    margin-bottom: 3px;
+  }
+
+  .help__logo {
+    width: 140px;
+  }
+
+  .help__alert {
+    width: 200px;
+    margin-bottom: 9px;
+  }
+}
+
+@media screen and (min-width: $ultra) {
+  .help__content {
+    padding: 62px 70px 52px 109px;
+    width: 1088px;
+    max-height: 1033px;
+  }
+
+  .help__header {
+    margin-bottom: 62px;
+  }
+
+  .help__logo {
+    width: 400px;
+  }
+
+  .help__cross {
+    width: 25px;
+    height: 25px;
+  }
+
+  .help__alert {
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 28px;
+  }
+
+  .help__alertIcon {
+    width: 17px;
+    height: 17px;
+  }
+
+  .help__agreement {
+    text-decoration: underline;
+  }
+
+  #dark .help__agreement {
+    color: $textColor_dark;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-width: $landscape) and (max-height: 600px) {
+  .help__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 70px 26px 170px;
+    width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    overflow-y: scroll;
+  }
+
+  .help__header {
+    margin-bottom: 10px;
+  }
+  .help__logo {
+    width: 156px;
+  }
+
+  .help__rows {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 502px;
+    flex-wrap: wrap;
+  }
+
+  .help__helper {
+    display: none;
+  }
+
+  .help__alert {
+    width: 500px;
+    margin-bottom: 7px;
+  }
+
+  .help__alertIcon {
+    width: 8px;
+    height: 8px;
+  }
+
+  .help__close {
+    top: 0;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-width: $landscapeMiddle) {
+  .help__content {
+    padding: 15px 30px 18px 79px;
+  }
+
+  .help__header {
+    margin-bottom: 5px;
+  }
+  .help__logo {
+    width: 120px;
+  }
+
+  .help__alert {
+    width: 500px;
+    margin-bottom: 7px;
+  }
+
+  .help__close {
+    top: 0;
+  }
+}
+
+@media (orientation: landscape) and (max-width: $landscapeSmall) {
+  .help__content {
+    padding: 15px 20px 10px 40px;
+  }
+
+  .help__rows {
+    max-width: 380px;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 400px) {
+  .help__content {
+    padding: 10px 10px 10px 10px;
+  }
+}

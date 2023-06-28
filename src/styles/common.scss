@@ -1,0 +1,132 @@
+@import "vars";
+@import "fonts";
+@import "btn";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $generalFont;
+  background-color: $bgColor;
+  color: $textColor;
+  font-weight: 400;
+  -webkit-text-size-adjust:none; //Предотвратить масштабирование шрифта в альбомной ориентации, разрешив пользователю масштабирование 
+}
+ol, ul, li {
+  border: 0;
+  vertical-align: baseline;
+} 
+
+ol, ul {
+  list-style: none;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.container__row {
+  width: 100%;
+  max-width: 1280px;
+  /* padding-left: 60px;
+  padding-right: 60px; */ // отступы до правок дизайна
+  padding-left: 50px; //контейнер 1180
+  padding-right: 50px;
+
+@media (max-width: $tablet)  {
+    padding-left: 67px;
+    padding-right: 67px; //добавила отступы после правок дизайна
+  }
+  @media (max-width: $mobile)  {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media (min-width: $ultra)  {
+    max-width: 2220px;
+  /*  padding-left: 100px;
+    padding-right: 100px; */ //отступы в проекте до правок дизайна
+    padding-left: 105px;
+    padding-right: 105px;
+  }
+}
+
+.container__row_wide { // для хедера
+  width: 100%;
+  max-width: 1320px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  @media (max-width: $mobile)  {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media (min-width: $ultra)  {
+    max-width: 2318px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+a {
+  color: $textColor;
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: $accentColor;
+  text-align: center;
+  @media(min-width: $ultra) {
+    font-size: 60px;
+  }
+
+  @media (max-width: $tablet)  {
+    font-size: 40px;
+  }
+
+  @media(max-width: $smallTablet) {
+    font-size: 28px;
+  }
+
+  @media (max-width: $mobile)  {
+    font-size: 18px;
+  }
+}
+
+@supports(padding:max(0px)) {
+  body, header, footer {
+      padding-left: min(0vmin, env(safe-area-inset-left));
+      padding-right: min(0vmin, env(safe-area-inset-right));
+  }
+}
+
+@media screen and (orientation:landscape)
+and (max-width: $landscape) and (max-height: 600px) {
+  .container__row {
+    padding: 0 60px;
+  }
+
+  .container__row_wide {
+    padding: 0 50px;
+  }
+}

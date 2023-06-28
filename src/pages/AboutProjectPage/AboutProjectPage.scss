@@ -1,0 +1,194 @@
+@import "../../styles/vars";
+@import "../../styles/mixin";
+
+
+#dark .about__list-item::before  {
+    background-color:#ffffff;
+}
+.about {
+    margin-top: 115px;
+    margin-bottom: 50px;
+
+    &__title {
+        margin-bottom: 70px;
+    }
+    &__subtitle {
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 44px;
+        margin-bottom: 15px;
+    }
+    &__text {
+        margin-bottom: 60px;
+        font-size: 22px;
+        line-height: 24px;
+    }
+    &__list-title {
+       /*  margin-bottom: 60px; */
+        margin-bottom: 5px;
+        font-size: 22px;
+        line-height: 24px;
+    }
+    &__list {
+        list-style-type: none;
+        margin-bottom: 60px;
+        font-size: 22px;
+        line-height: 24px;
+    }
+    &__list-item {
+        position: relative;
+        margin-left: 34px;
+        @include before_circleListBlack;
+        z-index: 1;
+    }
+    /* .list-item_bottom {
+        padding-bottom: 60px;
+    } */
+    .member {
+        margin-bottom: 0;
+    }
+}
+@media (min-width: $ultra) {
+    .about {
+        margin-top: 170px;
+        margin-bottom: 150px;
+        
+        &__title {
+            margin-bottom: 150px;
+        }
+        &__subtitle {
+            font-size: 48px;
+            line-height: 53px;
+            margin-bottom: 50px;
+        }
+        &__text {
+            margin-bottom: 100px;
+            font-size: 30px;
+            line-height: 30px;
+        }
+        &__list-title {
+            /* margin-bottom: 50px; */
+            font-size: 30px;
+            line-height: 30px;
+        }
+        &__list {
+            margin-bottom: 100px;
+            font-size: 30px;
+            line-height: 30px;
+        }
+        &__list-item {
+            margin-left: 50px;
+            &::before {
+                top: 10px;
+                left: -32px;
+                width: 10px;
+                height: 10px;
+            }
+        }
+        /* .list-item_bottom {
+            padding-bottom: 45px;
+        } */
+    }
+}
+
+@media (max-width: $tablet), 
+(orientation: portrait) and (min-width: $tablet) and (max-width: 1025px) and (min-height:1024px) and (max-height:1367px), 
+(orientation: landscape) and (min-width: 1023px) and (max-width: 1367px) and (min-height: 767px) and (max-height: 1025px) {
+    .about {
+        margin-top: 75px;
+        margin-bottom: 50px;  
+        
+        &__title {
+            margin-bottom: 40px;
+        }
+        &__subtitle {
+            font-size: 32px;
+            line-height: 41px;
+            margin-bottom: 10px;
+        }       
+        &__text {
+            margin-bottom: 30px;
+            font-size: 15px;
+            line-height: 15px;
+        }
+        &__list-title {
+            /* margin-bottom: 30px; */
+            font-size: 15px;
+            line-height: 15px;
+        }
+        &__list {
+            margin-bottom: 30px;
+            margin-left: 10px;
+            font-size: 15px;
+            line-height: 15px;
+        }
+        &__list-item {
+            margin-left: 13px;
+            &::before {
+                top: 5px;
+                left: -15px;
+                width: 6px;
+                height: 6px;
+            }
+        }
+        /* .list-item_bottom {
+            padding-bottom: 30px;
+        } */
+    }
+}
+
+@media (max-width: $mobile)  {
+    .about {
+        margin-top: 35px;
+        margin-bottom: 30px;
+        
+        &__title {
+            margin-bottom: 30px;
+        }
+        &__subtitle {
+            font-size: 14px;
+            line-height: 18px;
+            margin-bottom: 5px;
+        }    
+        &__text {
+            margin-bottom: 15px;
+            font-size: 10px;
+            line-height: 11px;
+        }
+        &__list-title {
+           /*  margin-bottom: 5px; */
+            font-size: 10px;
+            line-height: 11px;
+        }
+        &__list {
+            margin-left: 28px;
+            margin-bottom: 15px;
+            font-size: 10px;
+            line-height: 11px;
+        }
+        &__list-item {
+            margin-left: -13px;
+            &::before {
+                top: 3px;
+                left: -10px;
+                width: 4px;
+                height: 4px;
+            }
+        }
+    
+        /* .list-item_bottom {
+            padding-bottom: 15px;
+        } */
+    }
+}
+@media screen and (orientation:landscape) and (max-width: $horizonMobile) and (max-height: 600px) {
+    .about   {
+        margin-top: 20px; 
+    }
+}
+
+
+
+
+
+

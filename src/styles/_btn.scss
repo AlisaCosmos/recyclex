@@ -1,0 +1,141 @@
+@import "vars";
+
+.btn {
+    width: 400px;
+    padding: 27px 0;
+    font-family: $generalFont;
+    font-size: 28px;
+    background-color: $accentColor;
+    color: #FFFFFF;
+    font-weight: 700;
+    text-align: center;
+    line-height: 28px;
+    border: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    user-select: none;
+
+    // &:hover{
+    //     background-color: $greyColor;
+    //     color: $accentColor;
+    //     cursor: pointer;
+    //     transition: background-color 0.1s ease;
+    // }
+}
+
+.btn_smaller {
+    width: 300px;
+    padding: 20px 0;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.btn_modal {
+    width: 250px;
+    padding: 20px 0;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+// #dark .btn_smaller:hover {
+//     background-color: $greyColor;
+// }
+@media screen and (min-width: $ultra) {
+    .btn {
+        width: 650px;
+        padding: 33px 0;
+        font-size: 45px;
+        line-height: 45px;
+    }
+
+    .btn_modal {
+        width: 320px;
+        padding: 27px 0;
+        font-size: 24px;
+        line-height: 24px;
+    }
+}
+@media screen and (max-width: $tablet) {
+    .btn {
+        width: 300px;
+        padding: 23px 0;
+        font-size: 20px;
+        line-height: 20px;
+
+        // &:hover{
+        //     background-color: $accentColor;
+        //     color: #FFFFFF;
+        // }
+
+        // &:active {
+        //     background-color: $greyColor;
+        //     color: $accentColor;
+        // }
+    }
+
+    .btn_smaller {
+        padding: 20px 0;
+
+        // &:hover{
+        //     background-color: $accentColor;
+        //     color: #FFFFFF;
+        // }
+
+        // &:active {
+        //     background-color: $greyColor;
+        //     color: $accentColor;
+        // }
+    }
+
+    .btn_modal {
+        width: 200px;
+        padding: 13px 0;
+        font-size: 14px;
+        line-height: 14px;
+    }
+
+    // #dark .btn:hover {
+    //     background-color: $accentColor;
+    // }
+
+    // #dark .btn:active {
+    //     background-color: $bgColor;
+    // }
+    
+    
+    // #dark .btn_smaller:hover {
+    //     background-color: $accentColor;
+    // }
+
+    // #dark .btn_smaller:active {
+    //     background-color: $greyColor;
+    // }
+  }
+
+  @media screen and (max-width: $smallTablet) {
+    .btn_modal {
+        width: 160px;
+        padding: 13px 0;
+    }
+}
+
+  @media screen and (max-width: $mobile) {
+    .btn {
+        width: 200px;
+        padding: 11px 0;
+        font-size: 12px;
+        line-height: 12px;
+    }
+
+    .btn_smaller {
+        width: 170px;
+        padding: 9px 0;
+        font-size: 12px;
+        line-height: 12px;
+    }
+
+    .btn_modal {
+        width: 160px;
+        padding: 13px 0;
+    }
+  }

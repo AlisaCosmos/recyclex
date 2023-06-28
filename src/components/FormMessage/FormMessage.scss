@@ -1,0 +1,130 @@
+@import "../../styles/vars";
+
+.formMessage {
+    display: flex;
+    margin-bottom: 25px;
+    /* margin-left: 190px; */
+}
+
+.formMessage_right {
+    justify-content: flex-end;
+}
+
+.formMessage__border {
+    position: relative;
+    display: flex;
+    max-width: 502px;
+    padding: 15px 39px 15px 20px;
+    border-radius: 20px;
+    background-color: #EBEBEB;
+}
+
+#dark .formMessage__border {
+    background-color:  #1A1A1A;
+}
+
+.formMessage__border::after {
+    content: ''; 
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    bottom: -12px;
+    border: 21px solid transparent;
+    border-left: 38px solid #EBEBEB;
+}
+
+#dark .formMessage__border::after {
+    border-color: transparent;
+    border-left-color: #1A1A1A;
+}
+
+.formMessage__border_right::after {
+    content: ''; 
+    position: absolute;
+    z-index: 0;
+    right: 0;
+    bottom: -12px;
+    border: 21px solid transparent;
+    border-right: 38px solid #EBEBEB;
+}
+
+#dark .formMessage__border_right::after {
+    border-color: transparent;
+    border-right-color: #1A1A1A;
+}
+
+.formMessage__text {
+    z-index: 1;
+    font-size: 16px;
+    line-height: 20px
+}
+
+#dark .formMessage__text {
+    background-color:  #1A1A1A;
+    color: $textColor_dark;
+}
+
+
+@media (max-width: $tablet)  {
+    .formMessage {
+        margin-bottom: 55px;
+    }
+
+    .formMessage__text {
+        font-size: 20px;
+        line-height: 24px
+    }
+}
+
+@media (max-width: $mobile)  {
+    .formMessage {
+        margin-bottom: 15px;
+    }
+
+    .formMessage__border {
+        max-width: 242px;
+        padding: 5px 22px 5px 10px;
+        border-radius: 10px;
+    }
+
+    .formMessage__text {
+        font-size: 13px;
+        line-height: 17px;
+    }
+
+
+    .formMessage__border::after {
+        bottom: -7px;
+        border: 9px solid transparent;
+        border-left: 15px solid #EBEBEB;
+    }
+    
+    .formMessage__border_right::after {
+        bottom: -7px;
+        border: 9px solid transparent;
+        border-right: 15px solid #EBEBEB;
+    
+    }
+}
+
+@media (min-width: $ultra)  {
+    .formMessage {
+        display: flex;
+        margin-bottom: 50px;
+
+        // &:last-child {
+        //     margin-bottom: 206px;
+        // }
+    }
+    
+    .formMessage__border {
+        max-width: 818px;
+        padding: 44px 40px;
+        border-radius: 35px;
+    }
+
+    .formMessage__text {
+        font-size: 24px;
+        line-height: 31px
+    }
+}

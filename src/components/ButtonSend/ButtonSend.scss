@@ -1,0 +1,153 @@
+@import "../../styles/_vars.scss";
+
+.buttonSend {
+  overflow: hidden;
+}
+
+.buttonSend__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  background-color: transparent;
+  font-weight: 700;
+}
+
+.buttonSend__arrowWrapper {
+  width: 0;
+  height: 21px;
+  overflow: hidden;
+}
+
+.buttonSend:hover .buttonSend__arrowWrapper {
+  width: 25px;
+  display: grid;
+  grid-template-columns: 10fr 1fr;
+  align-items: center;
+  transition: width 0.1s ease-in-out;
+  overflow: visible;
+}
+
+.buttonSend:hover .buttonSend__arrowWrapper_active {
+  width: 0;
+}
+
+.buttonSend__arrow {
+  width: 25px;
+  margin-left: 13px;
+}
+
+.buttonSend__arrow_active {
+  transform: translateX(1000%);
+  transition: transform 300ms ease;
+}
+
+.buttonSend__checkWrapper {
+  position: relative;
+  display: none;
+}
+
+.buttonSend__checkWrapper_active {
+  display: block;
+}
+
+.buttonSend__check {
+  position: absolute;
+  width: 25px;
+  height: 15px;
+  top: -8px;
+  right: -12px;
+}
+
+.buttonSend__sendedText {
+  font-weight: 700;
+  margin-right: 18px;
+}
+
+@media screen and (max-width: $tablet), (orientation: portrait) and (min-width: $tablet) and (max-width: 1025px)  and (min-height:1024px) and (max-height:1367px)  {
+  .buttonSend__arrowWrapper {
+        width: 0;
+        height: 9px;
+  }
+
+  .buttonSend:hover .buttonSend__arrowWrapper {
+    display: none;
+    width: 0;
+    height: 9px;
+  }
+
+  .buttonSend:active .buttonSend__arrowWrapper {
+    display: none;
+  }
+  
+  .buttonSend__check {
+    width: 12px;
+    height: 9px;
+    top: -5px;
+    right: -11px;
+  }
+
+  .buttonSend__sendedText {
+    font-weight: 700;
+    margin-right: 5px;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  
+    .buttonSend__inner {
+      font-size: 14px;
+      line-height: 14px;
+
+  }
+    .buttonSend__check {
+        top: -5px;
+        right: -12px;
+      }
+    
+}
+
+@media screen and (min-width: $ultra) {
+  .buttonSend__check {
+    width: 28px;
+    height: 22px;
+    top: -13px;
+    right: -17px;
+    }
+  
+}
+@media screen 
+  and (pointer:coarse)
+  and (orientation: landscape) 
+  and (min-width: 1023px) 
+  and (max-width: 1367px) 
+  and (min-height: 767px) 
+  and (max-height: 1025px) {
+
+.buttonSend__arrowWrapper {
+        width: 0;
+        height: 9px;
+  }
+
+  .buttonSend:hover .buttonSend__arrowWrapper {
+    display: none;
+    width: 0;
+    height: 9px;
+  }
+
+  .buttonSend:active .buttonSend__arrowWrapper {
+    display: none;
+  }
+  
+  .buttonSend__check {
+    width: 12px;
+    height: 9px;
+    top: -5px;
+    right: -11px;
+  }
+
+  .buttonSend__sendedText {
+    font-weight: 700;
+    margin-right: 5px;
+  }
+  }

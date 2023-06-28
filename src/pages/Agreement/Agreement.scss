@@ -1,0 +1,108 @@
+@import "../../styles/vars";
+
+.agreement {
+    margin-top: 115px;
+    margin-bottom: 50px;
+    font-size: 22px;
+
+    &__title {
+        max-width: 950px;
+        margin: 0 auto;
+        margin-bottom: 70px;
+    }
+    &__list-title {
+        margin-bottom: 40px;
+    }
+    &__list {
+        list-style-type: none;
+        margin-bottom: 40px;
+    }
+    &__list-item {
+        margin-bottom: 40px
+    }    
+    &__text {
+        margin-bottom: 40px;
+        address {display: inline;}
+    }
+    address {
+        font-style: normal;
+    }
+}
+@media (min-width: $ultra) {
+    .agreement {
+        margin-top: 170px;
+        margin-bottom: 150px;
+        font-size: 30px;
+        &__title {
+            margin: 0 auto;
+            margin-bottom: 150px;
+        }
+        &__list-title {
+            margin-bottom: 50px;
+        }
+        &__list {
+            margin-bottom: 50px;
+        }
+        &__list-item {
+            margin-bottom: 50px
+        }    
+        &__text {
+            margin-bottom: 50px;
+        }
+    }
+}
+
+@media (max-width: $tablet), 
+(orientation: portrait) and (min-width: $tablet) and (max-width: 1025px) and (min-height:1024px) and (max-height:1367px), 
+(orientation: landscape) and (min-width: 1023px) and (max-width: 1367px) and (min-height: 767px) and (max-height: 1025px)  {
+    .agreement {
+        font-size: 15px;
+        margin-top: 75px;
+        margin-bottom: 50px;      
+        &__title {
+            margin-bottom: 40px;
+        }      
+        &__list-title {
+            margin-bottom: 30px;
+        }
+        &__list {
+            margin-bottom: 30px;
+        }
+        &__list-item {
+            margin-bottom: 30px
+        }
+        &__text {
+            margin-bottom: 30px;
+        }
+        
+    }
+}
+
+
+@media (max-width: $mobile)  {
+    .agreement {
+        font-size: 10px;
+        margin-top: 35px;
+        margin-bottom: 30px;
+        &__title {
+            margin-bottom: 30px;
+        }       
+        &__list-title {
+            margin-bottom: 20px;
+        }
+        &__list {
+            margin-bottom: 20px;
+        }
+        &__list-item {
+            margin-bottom: 20px; 
+        }
+        &__text {
+            margin-bottom: 20px;  
+        }
+    }
+}
+@media screen and (orientation:landscape) and (max-width: $horizonMobile) {
+    .agreement {
+        margin-top: 20px; 
+    }
+}

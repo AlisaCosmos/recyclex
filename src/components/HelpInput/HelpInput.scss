@@ -1,0 +1,539 @@
+@import "../../styles/vars";
+
+.help__row {
+    display: flex;
+    justify-content: space-between;
+
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+}
+
+.help__label {
+    font-size: 24px;
+    width: 35%;
+}
+
+.help__inputWrapper {
+    position: relative;
+    width: 65%;
+}
+
+.help__input {
+    width: 460px;
+    height: 30px;
+    padding: 6px 14px;
+    font-size: 16px;
+    line-height: 20px;
+    background-color: #f1f0f0;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-family: $modalFont;
+    appearance: none;
+    -webkit-appearance: none;
+    box-shadow: inset 0 0 0 50px #f1f0f0;
+    -webkit-box-shadow: inset 0 0 0 50px #f1f0f0;
+    &:focus {
+        outline: none;
+    }
+    caret-color: #000000;
+}
+
+.help__input:-webkit-autofill,
+.help__input:-webkit-autofill:hover,
+.help__input:-webkit-autofill:focus {
+    appearance: none;
+    -webkit-appearance: none;
+    -webkit-box-shadow: inset 0 0 0 50px #f1f0f0;
+    background-color: #f1f0f0 !important;
+    border-width: 0px;
+}
+
+.help__row .PhoneInputInput {
+    font-family: $generalFont;
+    border: none;
+    font-size: 16px;
+    background-color: #f1f0f0;
+    box-shadow: inset 0 0 0 50px #f1f0f0;
+    -webkit-box-shadow: inset 0 0 0 50px #f1f0f0;
+    -webkit-text-fill-color: #000;
+    caret-color: #000000;
+}
+
+#dark .help__row .PhoneInputInput {
+    box-shadow: inset 0 0 0 50px #1a1a1a;
+    -webkit-box-shadow: inset 0 0 0 50px #1a1a1a;
+    -webkit-text-fill-color: $bgColor;
+    caret-color: #ffffff;
+}
+
+#dark .help__input {
+    background-color: #1a1a1a;
+    border: 1px solid $bgColor;
+    color: $bgColor;
+    box-shadow: inset 0 0 0 50px #1a1a1a;
+    -webkit-box-shadow: inset 0 0 0 50px #1a1a1a;
+    -webkit-text-fill-color: $bgColor;
+    caret-color: #ffffff;
+}
+
+.help__input_error,
+#dark .help__input_error {
+    border-width: 3px;
+    border-color: $accentColor;
+    padding: 4px 12px; // уменьшаем паддинги на 2px из-за разной жирности бордера ошибки
+}
+.help__input_error:-webkit-autofill,
+.help__input_error:-webkit-autofill:hover,
+.help__input_error:-webkit-autofill:focus {
+    appearance: none;
+    -webkit-appearance: none;
+    -webkit-box-shadow: inset 0 0 0 50px #f1f0f0;
+    background-color: #f1f0f0 !important;
+    border-width: 3px;
+    border-color: $accentColor;
+    padding: 4px 12px;
+}
+
+.help__error {
+    position: absolute;
+    top: -15px;
+    left: 0;
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.help__row textarea {
+    height: 134px;
+    resize: none;
+}
+
+.help__row:last-child {
+    margin-bottom: 6px;
+}
+
+@media (max-width: $tablet) {
+    .help__label {
+        font-size: 16px;
+        width: 40%;
+    }
+
+    .help__inputWrapper {
+        width: 60%;
+    }
+
+    .help__input {
+        width: 280px;
+        height: 25px;
+        padding: 5px 14px;
+        font-size: 14px;
+    }
+
+    .PhoneInputCountry {
+        margin-right: 6px;
+    }
+
+    .help__row .PhoneInputInput {
+        font-size: 14px;
+    }
+
+    #dark .help__input_error {
+        border-width: 3px;
+    }
+
+    .help__input_error,
+    #dark .help__input_error {
+        padding: 3px 12px; // уменьшаем паддинги на 2px из-за разной жирности бордера ошибки
+    }
+
+    .help__error {
+        top: -9px;
+        font-size: 8px;
+        line-height: 8px;
+    }
+
+    .help__row textarea {
+        height: 100px;
+    }
+
+    .help__row:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    .help__row:last-child {
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: $smallTablet) {
+    .help__row {
+        display: block;
+
+        &:not(:last-child) {
+            margin-bottom: 3px;
+        }
+    }
+
+    .help__label {
+        font-size: 12px;
+        line-height: 14px;
+        width: 100%;
+    }
+
+    .help__inputWrapper {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+
+    .help__input {
+        width: 265px;
+        max-height: 25px;
+        padding: 5px 10px;
+        /* font-size: 10px; */ //работает зум
+        font-size: 16px;
+        line-height: 12px;
+        border-radius: 2px;
+        margin-bottom: 2px;
+        border-width: 2px;
+    }
+
+    .help__row .PhoneInputInput {
+        /* font-size: 10px; */ //работает зум в сафари
+        font-size: 16px;
+    }
+
+    .help__input {
+        border-width: 2px;
+    }
+
+    .help__error {
+        position: absolute;
+        /* top: 22px; */ // для зумма тултип смещаю
+        top: 25px;
+        left: 84px;
+        text-align: center;
+    }
+
+    .help__row:last-child .help__error {
+        top: 62px;
+        left: 84px;
+    }
+
+    #dark .help__input_error {
+        border-width: 2px;
+        padding: 1px 9px; // уменьшаем паддинги на 1px из-за разной жирности бордера ошибки
+    }
+
+    .help__row textarea {
+        max-height: 60px;
+    }
+
+    .help__row:last-child {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: $smallMobile) {
+    .help__label {
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    .help__input {
+        width: 210px;
+        /* max-height: 18px; */ //для зумма
+    }
+
+    .help__error {
+        top: 21px;
+        left: 59px;
+    }
+
+    .help__row:not(:last-child) {
+        margin-bottom: 6px;
+    }
+
+    .help__row:last-child {
+        margin-bottom: 2px;
+    }
+
+    .help__row:last-child .help__error {
+        top: 62px;
+        left: 59px;
+    }
+
+    .help__row textarea {
+        max-height: 60px;
+        margin-bottom: 13px;
+    }
+
+    .help__close {
+        top: 0;
+    }
+}
+
+@media screen and (min-width: $ultra) {
+    .help__label {
+        font-size: 28px;
+    }
+
+    .help__input {
+        width: 520px;
+        height: 50px;
+        padding: 15px 15px;
+        font-size: 23px;
+        line-height: 20px;
+        border: 1px solid $textColor;
+        background-color: $bgColor;
+        border-radius: 4px;
+        box-shadow: inset 0 0 0 50px $bgColor;
+        -webkit-box-shadow: inset 0 0 0 50px $bgColor;
+    }
+
+    .PhoneInputInput {
+        background-color: $bgColor;
+    }
+
+    .help__row .PhoneInputInput {
+        font-size: 23px;
+        background-color: $bgColor;
+        box-shadow: inset 0 0 0 50px $bgColor;
+        -webkit-box-shadow: inset 0 0 0 50px $bgColor;
+        -webkit-text-fill-color: #000;
+    }
+
+    .help__input_error,
+    #dark .help__input_error {
+        border-width: 4px;
+        border-color: $accentColor;
+        padding: 12px 12px; // уменьшаем паддинги на 3px из-за разной жирности бордера ошибки
+    }
+
+    .help__error {
+        top: -25px;
+        font-size: 19px;
+        line-height: 19px;
+    }
+
+    .help__row:not(:last-child) {
+        margin-bottom: 25px;
+    }
+
+    .help__row:last-child {
+        margin-bottom: 5px;
+    }
+}
+
+@media (orientation: landscape) and (max-width: $landscape) and (max-height: 600px) {
+    .help__row {
+        display: block;
+
+        &:not(:last-child) {
+            margin-bottom: 0;
+        }
+
+        &:first-child {
+            width: 100%;
+        }
+
+        &:nth-child(2) {
+            width: 45%;
+            padding-right: 20px;
+        }
+
+        &:nth-child(3) {
+            width: 55%;
+        }
+
+        &:nth-child(4) {
+            width: 100%;
+        }
+
+        &:nth-child(5) {
+            width: 50%;
+            padding-right: 10px;
+        }
+
+        &:nth-child(6) {
+            width: 50%;
+            padding-left: 10px;
+        }
+
+        &:last-child {
+            width: 100%;
+        }
+    }
+
+    .help__label {
+        font-size: 12px;
+        line-height: 14px;
+        width: 100%;
+    }
+
+    .help__inputWrapper {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+
+    .help__input {
+        width: 100%;
+        max-height: 25px;
+        padding: 5px 10px;
+        /* font-size: 8px; */ //работает зум сафари
+        font-size: 16px;
+        line-height: 12px;
+        border-radius: 2px;
+        margin-bottom: 0;
+        border-width: 2px;
+    }
+
+    .help__row .PhoneInputInput {
+        /* font-size: 8px; */ //работает зум сафари
+        font-size: 16px;
+    }
+
+    .help__input {
+        border-width: 2px;
+    }
+
+    .help__error {
+        position: absolute;
+        top: 22px;
+        left: 84px;
+        text-align: center;
+    }
+
+    .help__row:last-child .help__error {
+        top: 87px;
+        left: 84px;
+    }
+
+    #dark .help__input_error {
+        border-width: 2px;
+        padding: 1px 9px;
+    }
+
+    .help__row textarea {
+        max-height: 50px;
+    }
+
+    .help__row:last-child {
+        margin-bottom: 7px;
+    }
+
+    .help__error {
+        top: -9px;
+        right: 0;
+        left: unset;
+    }
+
+    .help__row:last-child .help__error {
+        top: -9px;
+        right: 0;
+        left: unset;
+    }
+}
+
+@media (orientation: landscape) and (max-width: $landscapeMiddle) {
+    .help__header {
+        margin-bottom: 0;
+    }
+
+    .help__label {
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    .help__input {
+       /*  max-height: 17px; */ //убрала для зумма
+       max-height: 25px; 
+        margin-bottom: -4px;
+    }
+    .help__error {
+        font-size: 7px;
+        top: 22px;
+        left: 84px;
+    }
+
+    .help__rows {
+        max-width: 491px;
+    }
+
+    .help__row textarea {
+        max-height: 35px;
+    }
+
+    .help__error {
+        top: -9px;
+        right: 0;
+        left: unset;
+    }
+
+    .help__row:last-child .help__error {
+        top: -9px;
+        right: 0;
+        left: unset;
+    }
+}
+
+@media (orientation: landscape) and (max-width: $landscapeSmall) {
+    .help__label {
+        font-size: 6px;
+        line-height: 9px;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 400px) {
+    .help__label {
+        font-size: 5px;
+        line-height: 6px;
+    }
+
+    .help__input {
+        margin-bottom: -7px;
+    }
+
+    .help__error {
+        font-size: 4px;
+        top: -7px;
+    }
+
+    .help__alert {
+        width: 250px;
+        font-size: 5px;
+        line-height: 5px;
+        margin-bottom: 3px;
+    }
+
+    .help__row:last-child {
+        margin-bottom: 0;
+    }
+
+    .help__row textarea {
+        max-height: 30px;
+        margin-bottom: 5px;
+    }
+
+    .help__alertIcon {
+        width: 5px;
+        height: 5px;
+    }
+}
+@media screen and (max-width: $smallTablet) and (-webkit-min-device-pixel-ratio:0) { 
+    select,
+    textarea,
+    .help__input/* ,
+    .PhoneInputInput */ {
+    font-size: 16px !important;
+    }
+    }
+    @media screen and (max-width: $smallTablet) and (-webkit-min-device-pixel-ratio:0) { 
+    select:focus,
+    textarea:focus,
+    .help__input:focus/* ,
+    .PhoneInputInput:focus  */{
+    font-size: 16px !important;
+    }
+    }

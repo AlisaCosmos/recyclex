@@ -1,0 +1,161 @@
+@import "../../styles/vars";
+
+.worker {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    padding: 40px 25px;
+    background-color: #EBEBEB;
+    border-radius: 8px;
+}
+
+#dark .worker {
+    background-color:#303030;
+}
+
+.worker__imgWrapper {
+    width: 35%;
+}
+
+.worker__img {
+    width: 100%;
+}
+
+.worker__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-basis: 48%;
+}
+
+.worker__position {
+    font-size: 18px;
+    line-height: 16.2px
+}
+
+.worker__name {
+    display: flex;
+    flex-direction: column;
+}
+
+.worker__surname {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+
+.worker__firstname {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.worker__contacts {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+}
+
+@media screen and (max-width: $desktop) {
+    .worker__info {
+        flex-basis: 52%;
+    }
+
+    .worker__position {
+        font-size: 14px;
+        line-height: 14.2px;
+    }
+
+    .worker__surname {
+        font-size: 33px;
+        margin-bottom: 0;
+    }
+    
+    .worker__firstname {
+        font-size: 20px;
+        font-weight: 700;
+    }
+    
+    .worker__contacts {
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .worker {
+        padding: 15px 35px;
+        gap: 12px;
+    }
+    .worker__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-basis: 55%;
+    }
+
+    .worker__imgWrapper {
+        width: 25%;
+        min-width: 185px;
+    }
+
+    .worker__img {
+        width: 185px;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .worker__surname {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    .worker {
+        padding: 9px 10px;
+    }
+
+    .worker__imgWrapper {
+        width: 15%;
+        min-width: 65px;
+    }
+
+    .worker__img {
+        width: 65px;
+        height: 100px;
+        object-fit: cover;
+    }
+
+    .worker__position {
+        font-size: 6px;
+        line-height: 7.8px;
+    }
+
+    .worker__surname {
+        font-size: 16px;
+        line-height: 18.4px;
+    }
+
+    .worker__firstname {
+        font-size: 16px;
+        line-height: 18.4px;
+    }
+
+    .worker__contacts {
+        font-size: 6px;
+        line-height: 7.8px;
+    }
+}
+
+@media screen and (max-width: $smallMobile) {
+    .worker__surname {
+        font-size: 12px;
+        line-height: 15.4px;
+    }
+
+    .worker__firstname {
+        font-size: 12px;
+        line-height: 15.4px;
+    }
+
+}

@@ -1,0 +1,208 @@
+@import "../../styles/vars";
+
+.thanksModal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+}
+
+#dark .thanksModal {
+    background-color: rgb(87 85 85 / 40%);
+}
+
+.thanksModal__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.thanksModal__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 74px 30px 68px 30px;
+    background-color: $bgColor;
+    width: 850px;
+    max-height: 750px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+#dark .thanksModal__content {
+    background-color: $bgColor_dark;
+}
+
+.thanksModal__header {
+    font-size: 64px;
+    line-height: 81.92px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.thanksModal__image {
+    width: 436px;
+    margin-bottom: 20px;
+}
+
+.thanksModal__description {
+    text-align: center;
+    font-size: 20px;
+    line-height: 20x;
+    font-weight: 700;
+    color: $accentColor;
+    margin-bottom: 50px;
+}
+
+@media (max-width: $tablet) {
+    .thanksModal__content {
+        padding: 37px 15px 33px 15px;
+        width: 550px;
+        max-height: 594px;
+    }
+
+    .thanksModal__header {
+        font-size: 48px;
+        line-height: 61.44px;
+        margin-bottom: 37px;
+    }
+
+    .thanksModal__image {
+        width: 349px;
+        margin-bottom: 30px;
+    }
+
+    .thanksModal__description {
+        font-size: 24px;
+        line-height: 25.08px;
+        margin-bottom: 42px;
+    }
+}
+
+@media (max-width: $smallTablet) {
+    .thanksModal__content {
+        padding: 37px 15px 33px 15px;
+        width: 450px;
+        max-height: 494px;
+    }
+
+    .thanksModal__header {
+        font-size: 45px;
+        line-height: 61.44px;
+        margin-bottom: 27px;
+    }
+
+    .thanksModal__image {
+        margin-bottom: 25px;
+    }
+
+    .thanksModal__description {
+        font-size: 18px;
+        line-height: 21.08px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: $mobile) {
+    .thanksModal__content {
+        padding: 37px 10px 38px 10px;
+        width: 230px;
+        max-height: 300px;
+    }
+
+    .thanksModal__header {
+        font-size: 24px;
+        line-height: 30.72px;
+        margin-bottom: 10px;
+    }
+
+    .thanksModal__image {
+        width: 131px;
+        margin-bottom: 13px;
+    }
+
+    .thanksModal__description {
+        font-size: 10px;
+        line-height: 10px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (min-width: $ultra) {
+    .thanksModal__content {
+        padding: 206px 30px 151px 30px;
+        width: 1600px;
+        max-height: 1400px;
+    }
+
+    .thanksModal__header {
+        font-size: 96px;
+        line-height: 122px;
+        margin-bottom: 50px;
+    }
+
+    .thanksModal__image {
+        max-width: 796px;
+        width: 100%;
+        margin-bottom: 44px;
+    }
+
+    .thanksModal__description {
+        font-size: 36px;
+        line-height: 36px;
+        margin-bottom: 94px;
+    }
+}
+
+@media (orientation: landscape) and (max-width: $landscape) and (max-height: 600px) {
+    .thanksModal__content {
+        padding: 37px 10px 38px 10px;
+        width: 230px;
+        max-height: 300px;
+    }
+
+    .thanksModal__header {
+        font-size: 24px;
+        line-height: 30.72px;
+        margin-bottom: 10px;
+    }
+
+    .thanksModal__image {
+        width: 131px;
+        margin-bottom: 13px;
+    }
+
+    .thanksModal__description {
+        font-size: 10px;
+        line-height: 10px;
+        margin-bottom: 20px;
+    }
+
+    .thanksModal .btn_smaller {
+        width: 170px;
+        font-size: 12px;
+        line-height: 12px;
+        padding: 11px 0;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-width: $landscapeMiddle) {
+    .thanksModal__content {
+        padding-top: 22px;
+        max-height: 270px;
+    }
+
+    .thanksModal__description {
+        font-size: 10px;
+        line-height: 10px;
+        margin-bottom: 15px;
+    }
+}

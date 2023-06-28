@@ -1,0 +1,110 @@
+@import "../../styles/vars";
+
+.switch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.switch__label {
+    font-size: 10px;
+}
+.react-switch {
+    display: block !important;
+    margin-top: 8px;
+    margin-bottom: 3px;
+}
+
+.react-switch-bg {
+    width: 72px !important;
+    height: 40px !important;
+    border: none !important;
+    border-radius: 20px !important;
+    background-color: #BDBDBD !important;
+}
+
+#dark .react-switch-bg {
+    background-color: #79C14C !important;
+}
+
+.react-switch-handle {
+    background-color: $bgColor !important;
+    width: 28px !important;
+    height: 28px !important;
+    top: 6.2px !important;
+    left: 6px !important;
+    transform: translateX(-1px) !important;
+}
+
+#dark .react-switch-handle {
+    transform: translateX(33px)  !important;
+}
+
+
+@media (max-width: 1050px)  {
+    .switch__label {
+        font-size: 8px;
+    }
+
+    .react-switch-bg {
+        width: 50px !important;
+        height: 30px !important;
+        border-radius: 15px !important;
+    }
+
+    .react-switch-handle {
+        width: 20px !important;
+        height: 20px !important;
+        top: 5px !important;
+        transform: translateX(-3px) !important;
+    }
+    
+    #dark .react-switch-handle {
+        transform: translateX(20px)  !important;
+    }
+}
+
+@media (max-width: 730px)  {
+    .react-switch-bg {
+        width: 30px !important;
+        height: 20px !important;
+    }
+
+    .react-switch-handle {
+        width: 16px !important;
+        height: 16px !important;
+        top: 2px !important;
+        transform: translateX(-3px) !important;
+    }
+    
+    #dark .react-switch-handle {
+        transform: translateX(6px)  !important;
+    }
+}
+
+@media (min-width: $ultra)  {
+    .switch__label {
+        font-size: 14px;
+    }
+
+    .react-switch-bg {
+        width: 90px !important;
+        height: 50px !important;
+        border-radius: 27px !important;
+    }
+
+    .react-switch-handle {
+        width: 44px !important;
+        height: 44px !important;
+        top: 3px !important;
+        transform: translateX(-2px) !important;
+    }
+    
+    #dark .react-switch-handle {
+        transform: translateX(37px)  !important;
+    }
+}
